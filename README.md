@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+# 1. 디자인 시스템의 핵심 구성 요소
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/design-system
+ ├── tokens/           # 색상, 타이포, 간격 등 디자인 토큰 JSON, SCSS 등
+ ├── foundations/      # 토큰을 활용한 기초 스타일 (타이포, 컬러, 그리드 등)
+ ├── components/       # 버튼, 입력창, 카드 등 컴포넌트 단위 UI
+ ├── patterns/         # 컴포넌트 조합 UI 패턴 (폼, 네비게이션, 리스트)
+ ├── utilities/        # margin, padding 등 유틸리티 클래스
+ ├── guidelines/       # 브랜드 가이드, 접근성, 코드 스타일 가이드
+ └── docs/             # Storybook, MDX 문서 파일
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1) Design Tokens (디자인 토큰)
+- 색상, 폰트, 간격, 그림자, 반경 등 기본 스타일 속성들의 원자 단위 변수들
+- 플랫폼 별로 통일된 변수명과 값으로 관리
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+예) --color-primary, --font-size-base, --spacing-sm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 2) Foundation (기초 스타일)
+- Design Tokens를 활용해 만든 타이포그래피, 컬러 팔레트, 아이콘, 그리드, 레이아웃 가이드라인
+- UI의 일관성을 위한 기본 원칙과 규칙들
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3) Components (컴포넌트)
+- 버튼, 입력창, 체크박스, 모달, 토스트 등 재사용 가능한 UI 컴포넌트 모음
+- 각 컴포넌트는 상태별 디자인, 인터랙션, 접근성까지 명확히 문서화
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 4) Patterns (패턴)
+- 여러 컴포넌트를 조합해서 만든 복합 UI 패턴 (예: 네비게이션 바, 폼, 리스트 등)
+- 사용자 경험 흐름과 가이드 포함
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 5) Utilities (유틸리티 클래스 / 함수)
+- 마진, 패딩, 디스플레이 속성 등 간단한 스타일 적용을 위한 헬퍼 클래스
+
+예) .m-10 (margin 10px), .text-center
+
+
+## 6) Guidelines (가이드라인)
+- 디자인 철학, 접근성 가이드, 작성 규칙, 브랜딩 가이드 등
+- 신규 디자이너/개발자 onboarding 문서 역할
+
