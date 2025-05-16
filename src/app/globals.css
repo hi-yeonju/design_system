@@ -40,3 +40,23 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-drag {
+  user-select: none;          /* 대부분 브라우저 */
+  -webkit-user-select: none;  /* 사파리, 크롬용 */
+  -moz-user-select: none;     /* 파이어폭스용 */
+  -ms-user-select: none;      /* IE/엣지용 */
+}
